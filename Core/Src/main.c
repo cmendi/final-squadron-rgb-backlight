@@ -189,7 +189,7 @@ void orange_sequence_full(void) {
 void purple_sequence_full(void) {
 	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 230); // Red
 	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0); // Green
-	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 100); // Blue
+	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 230); // Blue
 };
 
 void white_sequence_full(void) {
@@ -254,7 +254,7 @@ void orange_sequence_half() {
 void purple_sequence_half() {
 	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 115); // Red
 	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0); // Green
-	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 50); // Blue
+	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 115); // Blue
 }
 void white_sequence_half() {
 	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 115); // Red
@@ -323,7 +323,7 @@ void switch_off_all_leds(void)
 		                switch (color_sequence) {
 
 	                    case 0:
-	                        red_sequence_full();
+	                    	red_sequence_full();
 	                        break;
 	                    case 1:
 	                        green_sequence_full();
